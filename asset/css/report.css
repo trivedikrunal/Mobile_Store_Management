@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h3 {
+    color: #fff;
+}
+
+/* Navbar Styles */
+.navbar {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    transform: scale(1.1);
+}
+
+.reportBox{
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    margin-right: 700px;
+}
+
+table th, table td {
+    border: 1px solid #fff;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+table th {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+tr:hover {
+    background: rgba(255, 255, 255, 0.1);
+}

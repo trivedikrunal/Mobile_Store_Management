@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="asset/css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav class="navbar" style="display: none;"></nav>
+
+
+    <form class="loginForm" onsubmit="return validateLogin()">
+        <h3>Login</h3>
+        <div class="inputs">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter Username" required>
+            <p class="validationUsername"></p>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter Password" required>
+            <p class="validationPassword"></p>
+
+            <button type="submit">Login</button>
+
+        </div>
+    </form>
+
+    <button class="createUserButton" onclick="clickUser()" style="display: none;">New Customer<i class="fa-solid fa-user"></i>
+    </button>
+
+    <form class="adminForm" style="display: none;" onsubmit="return saveAdminSettings()">
+        <h3>Admin Panel</h3>
+        <div class="inputs">
+            <label for="adminUsername">Name of the user</label>
+            <input type="text" id="adminUsername" placeholder="Enter User Name" required><br>
+
+            <label for="adminEmail">Email ID of the user</label>
+            <input type="email" id="adminEmail" placeholder="Enter User Email" required><br>
+
+            <label for="adminPassword">Password of the user</label>
+            <input type="password" id="adminPassword" placeholder="Enter User Password" required><br>
+
+            <label for="mobilePage">Mobile Page</label>
+            <input type="checkbox" id="mobilePage">  <br>
+
+            <label for="customerPage"> Customer Page</label>
+            <input type="checkbox" id="customerPage">  <br>
+
+            <label for="purchasePage">Purchase Page</label>
+            <input type="checkbox" id="purchasePage">  <br>
+
+            <label for="salePage">Sale Page</label>
+            <input type="checkbox" id="salePage">  <br>
+
+            <label for="reportPage">Report Page</label>
+            <input type="checkbox" id="reportPage">  <br>
+
+            <button type="submit">Save</button>
+        </div>
+    </form>
+
+    <table class="userTable" style="display: none;">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Customer</th>
+                <th>Purchase</th>
+                <th>Sale</th>
+                <th>Report</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="userTableBody">
+        </tbody>
+    </table>
+
+    <script src="asset/js/login.js"></script>
+</body>
+
+</html>

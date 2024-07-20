@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/customer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body onload="readAll()">
+    <div class="navbar">
+      
+    </div>
+
+    <button class="createCustomerButton" onclick="clickCustomer()">New Customer<i class="fa-solid fa-user"></i>
+    </button>
+    <form class="customerCreateForm">
+        <br>
+        <h3>Create Customer Form </h3><br>
+        
+        <div class="inputs">
+            <!-- <input type="radio" class="typePerson" value="Vendor">Vendor<br>    -->
+
+            <label>Customer Name</label>
+            <input type="text" name="cName" class="cName" placeholder="Enter Customer Name" required>
+            <p class="validationcustomerName"></p>
+            <label>Email Id</label>
+            <input type="email" name="cEmail" class="cEmail" placeholder="Enter Email Id" required>
+            <p class="validationcustomerEmail"></p>
+            <label>Mobile Number</label>
+            <input type="tel"   name="cNumber" class="cNumber"
+                placeholder="Enter Mobile Number" maxlength="10" pattern="[0-9]{10}" required>
+                <p class="validationcustomerNumber"></p>
+                <div class="typePersonContainer">
+                    <input type="checkbox" class="typePerson" value="Vendor" id="vendor">
+                    <label for="vendor" class="typePersonLabel">Is Vendor</label>
+                </div>
+            <button type="button" onclick="createCustomer()">Create</button>
+            <button><a href="customer.html">Cancel</a></button>
+        </div>
+
+
+    </form>
+
+    <form class="customerUpdateForm">
+        <br>
+        <h3>Customer Update Form </h3><br>
+        
+        <div class="inputs">
+        <input type="hidden" name="ucId" class="ucId">
+        <label>Update Customer Name</label>
+        <input type="text" name="ucName" class="ucName" placeholder="Enter Customer Name">
+        <p class="validationcustomerUpdateName"></p>
+        <label>Update Email Id</label>
+        <input type="email" name="ucEmail" class="ucEmail" placeholder="Enter Email Id">
+        <p class="validationcustomerUpdateEmail"></p>
+        <label>Update Mobile Number</label>
+        <input type="tel" maxlength="10" name="ucNumber" class="ucNumber" placeholder="Enter Mobile Number">
+        <p class="validationcustomerupdateNumber"></p>
+        <div class="typePersonContainer">
+            <input type="checkbox" class="typePersonUpdate" value="Vendor" id="vendor">
+            <label for="vendor" class="typePersonLabel"> Is Vendor</label>
+        </div>
+        <button type="button" onclick="updateCustomer()">Update</button>
+        <button><a href="customer.html">Cancel</a></button>
+    </div>
+
+    </form>
+    <!-- <p id="success-message">Successful</p> -->
+
+
+
+
+
+    <table class="customerDetailsTable">
+        <div class="customerDetailsTitle">Customer Details</div>
+
+        <thead>
+            <th>Person</th>
+            <th>Name</th>
+            <th>Email Id</th>
+            <th>Mobile Number</th>
+            <th>Action</th>
+        <tbody class="tableCustomer">
+
+        </tbody>
+        </thead>
+    </table>
+
+
+    <script src="../js/navbar.js"></script>
+    <script src="../js/customer.js"></script>
+
+
+</body>
+
+</html>

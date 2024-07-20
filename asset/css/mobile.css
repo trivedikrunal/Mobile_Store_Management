@@ -1,0 +1,219 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h3 {
+    color: #fff;
+}
+
+/* Navbar Styles */
+.navbar {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    transform: scale(1.1);
+}
+
+/* Button Styles */
+button {
+    background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+}
+
+button a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Form Styles */
+form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    display: none;
+    margin-top: 6rem; /* To adjust for the fixed navbar */
+    width: 25rem;
+}
+
+form h3 {
+    margin-top: 0;
+}
+
+form .inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+form .inputs label {
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+form .inputs input {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+/* Table Styles */
+table {
+    width: 70%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+}
+
+table th, table td {
+    border: 1px solid #fff;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+table th {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.tableMobile tr:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Specific Elements */
+.createMobileButton {
+    display: inline-block;
+    margin-top: 6rem; /* To adjust for the fixed navbar */
+}
+
+.mobileDetailsTitle {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 3rem; /* To adjust for the fixed navbar */
+}
+
+/* Validation Messages */
+.validationMobileName,
+.validationMobileQuntitity,
+.validationMobilePrice,
+.validationUpdateMobileName,
+.validationUpdateMobileQuntitity,
+.validationUpdateMobilePrice, 
+.validationUpdateMobileImage, 
+.validationMobileImage {
+    color: #ff6b6b;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    margin-top: -0.7rem;
+}
+
+/* Image Modal Styles */
+.imageTh {
+    width: 100px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 70px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+#modalImage {
+    margin: auto;
+    display: block;
+    width: 30%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 35%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.3s;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
