@@ -111,6 +111,8 @@ To run this project, open the `login.html` file in your web browser. Ensure that
 # Pages Screenshort
 
 ## 1.Index Page
+- **Username**: admin
+- **Password**: admin
 ![image](https://github.com/user-attachments/assets/599f8786-ef2a-401d-94da-406342473b0a)
 
 - **After Admin Login**
