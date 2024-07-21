@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Store Management | Sale</title>
+    <link rel="stylesheet" href="../css/sale.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="navbar">
+      
+
+    </div>
+    <button class="createSaleButton" onclick="clickSale()">New Sale <i class="fa-solid fa-user"></i>
+    </button>
+    <form class="saleForm" style="display: none;">
+        <br>
+        <h3>Mobile Sale Form</h3><br>
+
+        <label>Customer Select</label>
+        <input type="text" list="datalistCustomer" id="customerInput" placeholder="Search Customer Name...">
+        <div class="customerValidation"></div>
+        <datalist id="datalistCustomer">
+        </datalist>
+        <label>Date</label>
+        <input type="date" id="saleDate">
+        <div class="dateValidation"></div>
+
+        <datalist id="datalistMobile">
+        </datalist>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Mobile</th>
+                    <th>Quantity</th>
+                    <th>Unit Price</th>
+                    <th>Original Price</th>
+                    <th>Total Price</th>
+                    <th>Profit/Loss</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody class="salesTable">
+                <tr id="addProductTitleRow">
+                    <td>
+                        <a id="addProductTitle" onclick="showInputField()">Add Product</a>
+                        <input type="text" list="datalistMobile" id="mobileInput" placeholder="Search Mobile Name..."
+                            oninput="mySalesProduct(this.value)" style="display: none;">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h3>Total Amount: <span id="totalAmount">0</span></h3>
+        <button type="button" class="saleSave"><i class="fa-solid fa-floppy-disk"></i></button>
+        <button type="button" class="saleCancel" onclick=" window.location.href = 'sale.html'"><i
+                class="fa-solid fa-ban"></i></button>
+    </form>
+    <div class="bgSame">
+        <table class="customerSalesTable2">
+            <thead>
+                <tr>
+                    <th>Customer Name</th>
+                    <th>Total Amount</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody class="customerSalesTable">
+            </tbody>
+        </table>
+    </div>
+
+    <div id="saleDetailsDisplay" style="display: none;">
+        <h3>Sale Details</h3>
+        <p><strong>Customer:</strong> <span id="detailCustomer"></span></p>
+        <p><strong>Date:</strong> <span id="detailDate"></span></p>
+        <p><strong>Total Amount:</strong> <span id="detailTotalAmount"></span></p>
+        <h4>Products:</h4>
+        <table id="detailProductsTable">
+            <thead>
+                <tr>
+                    <th>Mobile Name</th>
+                    <th>Quantity</th>
+                    <th>Unit Price</th>
+                    <th>Total Price</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/sale.js"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Store Management | Purchase</title>
+    <link rel="stylesheet" href="../css/purchase.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <div class="navbar">
+    
+
+
+    </div>
+    <button class="createPurchaseButton" onclick="clickPurchase()">New Purchase<i class="fa-solid fa-user"></i>
+    </button>
+    <form class="purchaseForm" style="display: none;">
+        <br>
+        <h3>Mobile Purchase Form </h3><br>
+
+        <label>Vendor Select</label>
+        <input type="text" list="datalistVendor" id="vendorInput" placeholder="Search Vendor Name...">
+        <div class="vandorValidation"></div>
+        <datalist id="datalistVendor">
+        </datalist>
+        <label>Date</label>
+        <input type="date" id="purchaseDate">
+        <div class="dateValidation"></div>
+
+        <datalist id="datalistMobile">
+        </datalist>
+
+        <table>
+            <thead>
+                <th>Mobile</th>
+                <th>Quantity</th>
+                <th>Unit Price</th>
+                <th>Total Price</th>
+                <th>Action</th>
+            </thead>
+            <tbody class="parchesTable">
+                <tr id="addProductTitleRow">
+                    <td>
+                        <a id="addProductTitle" onclick="showInputFild()">Add Product</a>
+                        <input type="text" list="datalistMobile" id="mobileInput" placeholder="Search Mobile Name..."
+                            oninput="myPurchesProduct(this.value)" style="display: none;">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Total Amount: <span id="totalAmount">0</span></h3>
+        <button type="button" class="purchaseSave"><i class="fa-solid fa-floppy-disk"></i></button>
+        <button type="button" class="purchaseCancel" onclick=" window.location.href = 'purchase.html'"><i
+                class="fa-solid fa-ban"></i></button>
+    </form>
+    <div class="bgSame">
+        <table class="vendorPurchasTable2">
+            <thead>
+                <tr>
+                    <th>Vendor Name</th>
+                    <th>Total Amount</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody class="vendorPurchasTable">
+            </tbody>
+        </table>
+    </div>
+
+    
+        <div id="purchaseDetailsDisplay" style="display: none;">
+            <h3>Purchase Details</h3>
+            <p><strong>Vendor:</strong> <span id="detailVendor"></span></p>
+            <p><strong>Date:</strong> <span id="detailDate"></span></p>
+            <p><strong>Total Amount:</strong> <span id="detailTotalAmount"></span></p>
+            <h4>Products:</h4>
+            <table id="detailProductsTable">
+                <thead>
+                    <tr>
+                        <th>Mobile Name</th>
+                        <th>Quantity</th>
+                        <th>Unit Price</th>
+                        <th>Total Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Product details will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+        <script src="../js/navbar.js"></script>
+
+    <script src="../js/purchase.js"></script>
+
+
+</body>
+
+</html>
