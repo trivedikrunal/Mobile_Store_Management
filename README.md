@@ -9,7 +9,7 @@ The project is organized as follows:
 ### 1. HTML Files
 
 - **login.html**
-  - **Path**: `Project/login.html`
+  - **Path**: `Project/index.html`
   - **Purpose**: Provides a secure login interface for both admin and users. Only the admin can log in initially to create and manage user accounts.
 
 - **asset/html/customer.html**
@@ -110,7 +110,7 @@ To run this project, open the `login.html` file in your web browser. Ensure that
 
 # Pages Screenshort
 
-## 1.Login Page
+## 1.Index Page
 ![image](https://github.com/user-attachments/assets/599f8786-ef2a-401d-94da-406342473b0a)
 
 - **After Admin Login**
